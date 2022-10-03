@@ -1,0 +1,33 @@
+body {
+    background-image: url(../static/fundo.png);
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    column-gap: 40%;
+    padding-top: 10px;
+}
+
+.link {
+    padding-top: 40px;
+}
+
+.img {
+    box-shadow: 1px 1px 4px black;
+    box-sizing: border-box;
+    margin-left: 200px;
+    margin-top: 28px;
+    height: 413px;
+    width: 900px;
+
+}
+
+.text {
+    text-align: justify;
+    margin: 0px 200px 0px 200px;
+}
+
+.text2{
+    text-align: center;
+}
