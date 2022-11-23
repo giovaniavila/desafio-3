@@ -25,13 +25,16 @@
         <hr>
     </div>
     <div class="text1">
-        <p>seu email:</p>
-         <p class="borda">⠀⠀⠀⠀</p>
-        <p>Assunto:</p>
-         <p class="borda">⠀⠀⠀⠀</p>
-        <p>Descrição:</p>
-         <p class="borda">⠀⠀⠀⠀ <br> ⠀⠀⠀⠀</p>
-        <p class="borda2">enviar</p>
+        <form method="post" action="/contato">
+            <p>seu email:</p>
+             <input class="input" type="text" name="email">
+            <p>Assunto:</p>
+             <input class="input" type="text" name="assunto">
+            <p>Descrição:</p>
+             <input id="input" type="text" name="descricao">
+             <br>
+            <input type="button" value="enviar">
+        </form>
     </div>
     <strong>
         <p class="text2">Todos os direitos reservados</p>
