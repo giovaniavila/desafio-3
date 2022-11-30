@@ -1,12 +1,12 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 app = Flask(__name__,template_folder='templates', static_folder='static')
-from flask_mysql import mysql
+from flask_mysqldb import MySQL
 
 #conexão com o banco de dados
-app.config['MYSQL_Host'] = 'localhost'
+app.config['MYSQL_HOST'] = 'localhost'
 app.config['MYSQL_USER'] = 'root'
-app.config['MYSQL_PASSWORD'] = '1234'
-app.config['mysql_db'] = 'contatos'
+app.config['MYSQL_PASSWORD'] = ''
+app.config['MYSQL_DB'] = 'contatos'
 
 mysql = MySQL(app) 
 
@@ -27,7 +27,7 @@ def contatos():
         descricao = request.form['descricao']
 
         cur = mysql.connection.cursor() #abre a conexão com o banco
-        cur.execute('insert into contato (email, assunto, descricao) VALUES (%s, %s, %s)', (email,assunto,descricao)) #executa o insert into
+        cur.execute('insert into contatos (email, assunto, descricao) VALUES (%s, %s, %s)', (email,assunto,descricao)) #executa o insert into
         #%s = string  
         #primeiro campo assunto descricao = variação de carcteres na tabela
         #segundo campo = onde será inserido os dados
